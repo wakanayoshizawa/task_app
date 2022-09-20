@@ -1,0 +1,155 @@
+.category-form {
+  padding: 0 10px;
+}
+.category-form  div {
+  padding-bottom: 30px;
+}
+.category-form form {
+  padding-top: 50px;
+}
+#category_name {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c8c8c8;
+}
+.category-form-action input {
+  background: #517D99;
+  color: #fff;
+  width: 100%;
+  border: none;
+  padding: 10px;
+}
+.category-form label {
+  padding-bottom: 7px;
+}
+#category-list {
+  padding-top: 30px;
+}
+#category-list ul {
+  padding-left: 0;
+  
+}
+#category-list ul li {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+#category-list-a1 {
+  background: #fff;
+  text-decoration: none;
+  color: black;
+  padding: 15px;
+  width: 70%;
+  border: 1px solid #c8c8c8;
+}
+#category-list-a2 {
+  padding: 15px;
+  margin-left: 10px;
+  text-decoration: none;
+  background: #516C9D;
+  color: #fff;
+  text-align: center;
+}
+#category-list-a1:hover {
+  background: #DEDEDE;
+}
+#category-list-a2:hover {
+  opacity: 0.7;
+}
+#category-form-delete form {
+  border-top: 2px dotted #000;
+  margin-top: 35px;
+}
+#category-form-delete form button {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  background: #C0C0C0;
+}
+.workspace {
+  border-top: 2px solid #cccccc;
+}
+.workspace-in {
+  display: flex;
+  flex-wrap: wrap;
+}
+.workspace-left {
+  overflow: auto;
+  position: absolute;
+  border-right: 2px solid #cccccc;
+  width: 340px;
+  background: #E9E9E9;
+}
+.workspace-right {
+  padding-left: 339px;
+  width: 100%;
+}
+.workspace-left .task-form-actions input {
+  width: 100%;
+}
+.category_name {
+  padding: 20px 10px;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #cccccc;
+  text-align: center;
+}
+.category_name span {
+  font-size: 0.8rem;
+  color: #6E777C;
+  padding-left: 7px;
+}
+.workspace-form {
+  padding: 35px 15px;
+}
+.workspace-form div {
+  padding-bottom: 30px;
+}
+.workspace-form  span {
+  font-size: 0.7rem;
+  color: #6E777C;
+  margin-left: 5px;
+}
+.workspace-title input, .workspace-content textarea {
+  width: 100%;
+}
+.workspace-title label, .workspace-content label, .workspace-status label, .workspace-deadline label {
+  padding-bottom: 10px;
+}
+.workspace-form .status-in {
+  padding-bottom: 0 !important;
+}
+.workspace-form .status-in label {
+  padding: 0 8px 0 0;
+}
+#workspace-task {
+  white-space: nowrap;
+  overflow: scroll;
+  width: 100%;
+  padding: 40px 40px 10px;
+}
+#workspace-task div {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-between;
+}
+
+#workspace-task div ul {
+  display: flex;
+  background: #fff;
+  padding: 15px;
+  width: 373px;
+    margin: 10px 10px;
+}
+#workspace-task nav {
+  width: 800px;
+  padding-top: 30px;
+  margin: auto;
+}
+#workspace-task div:after {
+  content: "";
+    display: block;
+    width: 32%;
+    height: 0;
+}

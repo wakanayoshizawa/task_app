@@ -1,0 +1,30 @@
+<header class="navbar navbar-expand-sm">
+  <a class="navbar-brand" href="/">タスク管理アプリ</a>
+  <ul class="navbar-nav">
+    <% if user_signed_in? %> 
+      <li><%= link_to 'タスク一覧', tasks_path, class: "nav-link" %></li>
+      <li><%= link_to "マイタスク", user_path(current_user.id),  class: "nav-link" %></li>
+    <% else %>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "nav-link" %></li>
+      <li><%= link_to "新規登録", new_registration_path(resource_name), class: "nav-link" %></li>
+    <% end %>
+  </ul>
+  <div class="hamburger-menu">
+    <input type="checkbox" id="menu-check">
+    <label for="menu-check" class="menu-bar"><span></span></label>
+    <div class="menu-content">
+      <ul>
+        <% if user_signed_in? %>
+          <li><%= link_to 'タスク一覧', tasks_path %></li>
+          <li><%= link_to 'ユーザー設定', edit_user_registration_path %></li>
+          <li><%= link_to "マイタスク", user_path(current_user.id) %></li>
+          <li><%= link_to 'ログアウト', users_sign_out_path, data: { confirm: "ログアウトしますか?" }, method: :delete %></li>
+        <% else %>
+          <li><%= link_to 'ログイン', new_user_session_path %></li>
+          <li><%= link_to "新規登録", new_registration_path(resource_name) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  
+</header>

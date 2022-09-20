@@ -1,0 +1,53 @@
+
+
+<div class="workspace">
+  <div class="workspace-in">
+    <div class="workspace-left">
+      <div>
+        <h2 class="category_name"><%= @category.name %><span>のタスク</span></h2>
+      </div>
+      <div class="workspace-form">
+        <%= form_for(@task, data: { remote: true }, class: 'js-form') do |f| %>
+          <%= render 'layouts/error_messages', model: f.object %>
+          <div class="workspace-title">
+            <%= f.label :タイトル %><span>(必須)</span><br>
+            <%= f.text_field :title, autofocus: true %>
+          </div>
+          <div class="workspace-content">
+            <%= f.label :内容 %><br>
+            <%= f.text_area :content %>
+          </div>
+          <div class="workspace-status">
+            <%= f.label :状況 %><span>(必須)</span><br>
+            <div class="status-in">
+              <%= f.radio_button :status, :"未対応" %>
+              <%= f.label :status, "未対応", value: :"未対応" %>
+              <%= f.radio_button :status, :"対応中" %>
+              <%= f.label :status, "対応中", value: :"対応中" %>
+            </div>
+          </div>
+          <div class="workspace-deadline">
+            <%= f.label :期限 %><span>(必須)</span><br>
+            <%= f.date_field :start_time, class: 'form-control' %>
+          </div>
+          <div class="pppp">
+            <%= f.label  "ワークスペース" %><%= link_to "（ワークスペース追加はこちら）", new_category_path, target: :_blank, rel: "noopener noreferrer" %><br>
+            <%= f.collection_select :category_id, Category.all, :id, :name, { selected: @category.id } %>
+          </div>
+          <div class="task-form-actions">
+            <%= f.submit "登録する" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="workspace-right">
+      <div id="workspace-task">
+        <div id="workspace-task-in">
+          <%= render 'tasks/test', tasks: @tasks %>
+        </div>
+        <%= paginate @tasks %>
+      </div>
+      
+    </div>
+  </div>
+</div>

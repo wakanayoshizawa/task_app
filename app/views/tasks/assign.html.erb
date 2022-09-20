@@ -1,0 +1,17 @@
+<div class="container">  
+  <div id="assign">
+    <h2 class="page_title">アサイン</h2>
+    <div id="assign-form"> 
+      <%= simple_form_for @task do |f| %>
+        <p>アサインするユーザーを選択</p>
+        <div id="assign-form-inside">
+          <%= f.input :user_id, collection: User.all %>
+          <p id="assign-submit">
+            <%= f.button :submit, 'アサイン' %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+    <%= render "task_show", task: @task %>
+  </div>
+</div>

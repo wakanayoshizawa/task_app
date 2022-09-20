@@ -1,0 +1,43 @@
+<div class="container">  
+  <div id="user_edit_page">
+    <h2 class="page_title">ユーザー設定</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+          <em><%= @minimum_password_length %>文字以上</em>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+
+    
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div class="actions">
+       <%= f.submit "更新する" %>
+      </div>
+    <% end %>
+    <div id="user-delete">
+      <h5>アカウント削除</h5>
+      <p><%= button_to "こちらから削除できます", registration_path(resource_name), data: { confirm: "削除して大丈夫ですか?" }, method: :delete %></p>
+    </div>
+  </div>
+</div>

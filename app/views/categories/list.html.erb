@@ -1,0 +1,13 @@
+<div class="container">  
+  <h2 class="page_title">ワークスペース一覧</h2>
+  <div id="category-list">
+    <ul>
+      <% @categories.each do |category| %>
+        <li>
+          <%= link_to category.name, categories_path(category_id: category.id), id: 'category-list-a1' %>
+          <%= link_to '編集', edit_category_path(category), id: 'category-list-a2' %>    
+        </li>
+      <% end %>
+    </ul>
+  </div>  
+</div>

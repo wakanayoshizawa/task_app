@@ -1,0 +1,17 @@
+<div class="container">  
+  <div class="category-form">
+    <h2 class="page_title">ワークスペース名変更</h2>
+    <%= form_with model: @category, local: true do |f| %>
+      <div>
+        <%= f.label :name, "ワークスペース名"  %><br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="category-form-action">
+        <%= f.submit "登録する"%>
+      </div>
+    <% end %>
+    <div id="category-form-delete">
+      <%= button_to "削除", @category,data: { confirm: "削除して大丈夫ですか?" }, method: :delete %>
+    </div>
+  </div>  
+</div>

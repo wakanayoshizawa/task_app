@@ -1,0 +1,119 @@
+@media screen and (max-width: 460px) {
+  .task-show-action1, .task-show-action2, .task-show-action3, .task-show-action4 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  #task-action-show form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 523px) {
+  #assign-form {
+    padding: 20px !important;
+  }
+  .task-form {
+    padding: 0px 10px !important;
+  }
+}
+@media screen and (min-width: 576px) {
+  .navbar-expand-sm {
+    justify-content: space-between !important;
+  }
+  .container {
+    max-width: 100% !important;
+  }
+}
+@media screen and (max-width: 579px) {
+  .task-panel {
+    width: 100% !important;
+    margin: 10px 0 !important;
+  }
+}
+@media screen and (min-width: 580px) and (max-width: 880px) {
+  .task-panel {
+    width: 46% !important;
+  }
+}
+@media screen and (min-width: 600px) {
+  .tab-list-wrap li {
+    width: 200px !important;
+  }
+}
+@media screen and (max-width: 649px) {
+  #sign_up, #log_in, #password_new, #password_edit {
+    width: 100% !important;
+  }
+  .task-list, #category-list {
+    width: 100% !important;
+  }
+  .arrow {
+    padding-right: 15px !important;
+  }
+}
+@media screen and (min-width: 700px) {
+  .category-form {
+    width: 650px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 780px) {
+  .calendar-heading {
+    width: 900px !important;
+  }
+  .simple-calendar table {
+    max-width: 900px !important;
+    width: 900px !important;
+  }
+}
+@media screen and (min-width: 900px) {
+  
+}
+@media screen and (max-width: 950px) {
+  .navbar-nav {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 951px) {
+  .hamburger-menu {
+    display: none;
+  }
+  #task_show, #assign, #category-list {
+    width: 900px !important;
+    margin: auto !important;
+  }
+  #assign-form form {
+    width: 85%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 990px) {
+  #user_edit_page {
+    width: 95% !important;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #task-index, .gg {
+    width: 1000px;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .task-form {
+    width: 900px;
+    margin: auto;
+  }
+  
+}
+@media screen and (min-width: 1190px) {
+  #user-show {
+    width: 1050px !important;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .arrow {
+    right: 96px !important;
+  }
+}
+
+

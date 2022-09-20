@@ -1,0 +1,365 @@
+#task-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+.task_page_title {
+  padding-bottom: 15px;
+  text-align: center;
+}
+.task-panel {
+  width: 31%;
+  background: #f7f9f9;
+  margin: 10px 0;
+}
+#task-panel-content {
+  border-bottom: 1px solid #c8c8c8;
+  border-right: 1px solid #c8c8c8;
+  border-left: 1px solid #c8c8c8;
+}
+.task-panel p, .task-panel h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.task-panel p {
+  padding: 12px 15px;
+  margin-bottom: 0;
+  font-size: 0.85rem;
+}
+.task-panel h4 {
+  color: #fff;
+  padding: 20px 15px 20px;
+  margin-bottom: 0;
+}
+.required h4 {
+  background: #60CAAD;
+  border: 1px solid #60CAAD;
+}
+.expired h4 {
+  background: #E67A7A;
+  border: 1px solid #E67A7A;
+}
+.required p span {
+  background: #60CAAD;
+  padding: 6px 13px;
+  color: #fff;
+  font-size: 0.7rem;
+}
+.expired p span {
+  background: #E67A7A;
+  padding: 6px 13px;
+  color: #fff;
+  font-size: 0.7rem;
+}
+.finish h4 {
+  background: #4EA1D5;
+  border: 1px solid #4EA1D5;
+}
+.finish p span {
+  background: #4EA1D5;
+  padding: 6px 13px;
+  color: #fff;
+  font-size: 0.7rem;
+  margin-left: 6px;
+}
+.task-action {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 13px 20px;
+}
+#task-action-show  {
+  padding-top: 20px;
+}
+#task-index form {
+  margin-right: 5px;
+}
+#task-action-show .task-action {
+  justify-content: center;
+}
+#task-action-show form {
+  margin-right: 5px;
+}
+.task-action a {
+  padding: 6px 10px;
+  line-height: 24px;
+  font-size: 0.7rem;
+  text-decoration: none;
+  margin-right: 5px;
+  border-radius: 100px;
+}
+.task-action1 {
+  color: black;
+  border: 1px solid;
+  background: #f2f2f2;
+}
+.task-action1:hover {
+  color: black;
+}
+.task-action2 {
+  color: #fff;
+  background: #516C9D;
+}
+.task-action2:hover {
+  color: #fff;
+}
+.status-in {
+  display: flex;
+}
+.status-in .field_with_errors {
+  margin-right: 7px;
+}
+.deadline-select {
+  padding-bottom: 25px !important;
+}
+.deadline-select select {
+  border: 1px solid #c8c8c8;
+  padding: 4px;
+}
+#task-show-about {
+  margin-top: 35px;
+  width: 100%;
+}
+#task-show-about tr {
+  border-top: 1px solid #c8c8c8;
+}
+#task-show-about th {
+  padding: 15px;
+  margin: 5px;
+}
+.task-show-about-th2 {
+  font-weight: 400;
+}
+#task-show-action {
+  padding-top: 35px;
+  text-align: center;
+}
+#task-show-action a {
+  padding: 10px 10px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.task-show-action1 {
+  color: black !important;
+  border: 1px solid !important;
+  background: #fff !important;
+}
+.task-show-action1:hover {
+  color: black;
+}
+.task-show-action2:hover, .task-show-action3:hover, .task-show-action4:hover {
+  color: #fff;
+} 
+.task-action button {
+  background: #516C9D;
+  border: none;
+  padding: 11px 12px;
+  color: #fff;
+  font-size: 0.7rem;
+  border-radius: 100px;
+}
+#task-action-show a {
+  background: #516C9D;
+    border: none;
+    padding: 6px 16px;
+    color: #fff;
+    border-radius: 100px;
+}
+.task-form {
+  padding: 0 40px;
+}
+#task_content {
+  height: 215px;
+}
+.task-form-actions {
+  padding-top: 20px;
+  text-align: center;
+}
+.task-form #task_title, .task-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c8c8c8;
+}
+.task-form div {
+  padding-bottom: 10px;
+}
+.task-form label {
+  padding-bottom: 7px;
+}
+.task-form-actions input {
+  background: #fff;
+  border: 1px solid;
+  padding: 8px 20px;
+  font-size: 1rem;
+}
+.task-form-actions a {
+  top: 1px;
+  position: relative;
+  background: #517D99;
+  text-decoration: none;
+  padding: 13px 20px;
+  color: #fff;
+}
+.task-form-actions a:hover {
+  color: #fff;
+}
+.project-select a {
+  font-size: 0.8rem;
+  color: #626262;
+  text-decoration: none;
+}
+.project-select a:hover {
+  color: #626262;
+  opacity: 0.7;
+}
+.project-select select {
+  padding: 6px;
+  font-size: 0.9rem;
+}
+#assign {
+  width: 98%;
+  margin: auto;
+}
+#assign-form {
+  background: #fff;
+  padding: 35px;
+}
+#assign-submit {
+  text-align: center;
+  margin-bottom: 0;
+}
+#assign-submit input {
+  background: #516C9D;
+  color: #fff;
+  padding: 10px;
+}
+#assign-form p {
+  margin-bottom: 10px;
+}
+#assign-form form .form-group {
+  width: 100%;
+  margin-right: 12px;
+}
+#assign-form form label {
+  display: none;
+}
+#assign-form-inside {
+  display: flex;
+}
+.form-control.is-valid {
+  border-color: #c8c8c8 !important;
+  background: none !important;
+  padding: 10px !important;
+}
+.form-control.is-valid:focus {
+  box-shadow: none !important;
+}
+.calendar-heading a {
+  color: black;
+  margin: 0 5px;
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.calendar-heading a:hover {
+  background: #DBDBDB;
+  color: black;
+}
+.simple-calendar thead tr {
+  display: flex;
+  
+}
+.simple-calendar thead th  {
+  width: 100%;
+}
+.simple-calendar tbody td {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.simple-calendar tbody td div {
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+.simple-calendar tbody tr {
+  display: flex;
+  
+}
+.day div a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  padding: 5px;
+}
+.simple-calendar .day {
+  height: 100px !important;
+}
+
+#task-index:after {
+  content: "";
+  display: block;
+  width: 32%;  
+  height: 0;
+}
+.gg {
+  padding: 0 25px;
+}
+.gg img {
+  width: 70px
+}
+
+.simple-calendar {
+  overflow-x: scroll;
+}
+.calendar-heading {
+  width: 1110px;
+  margin: auto;
+  padding: 8px 0;
+}
+.container .simple-calendar table {
+  width: 1110px;
+  border-collapse: collapse;
+  white-space: nowrap;
+  max-width: 1110px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+#upper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0 !important;
+  background:  transparent;
+}
+.today #upper-other1 {
+  background: #F99F48;
+  border-radius: 50%;
+  width: 25px;
+  color: #fff;
+  padding: 1px;
+  text-align: center;
+}
+#upper-other2 {
+  color: #6E777C;
+  font-size: 0.8rem;
+  position: relative;
+  top: 5px;
+}
+#under a:hover {
+  opacity: 0.6;
+}
+.simple-calendar .today {
+  background: transparent !important;
+}
+.day div {
+  background: #516C9D;
+}
+#home-pagination  {
+  padding: 30px 0;
+}

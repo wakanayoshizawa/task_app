@@ -1,0 +1,22 @@
+<table id="task-show-about">
+    <tr>
+      <th>タイトル</th>
+      <th class="task-show-about-th2"><%= @task.title %></th> 
+    </tr>
+    <tr>
+      <th>内容</th>
+      <th class="task-show-about-th2"><%= simple_format(@task.content)%></th> 
+    </tr>
+    <tr>
+      <th>期限</th>
+      <th class="task-show-about-th2"><%= @task.start_time.strftime('%Y年%m月%d日') %></th> 
+    </tr>
+    <tr>
+      <th>担当者</th>
+      <th class="task-show-about-th2"><%= @task.user.name %></th> 
+    </tr>
+    <tr>
+      <th>ステータス</th>
+      <th class="task-show-about-th2"><%= @task.status %></th> 
+    </tr>
+  </table>
