@@ -1,10 +1,8 @@
-
-
 <div class="workspace">
   <div class="workspace-in">
     <div class="workspace-left">
       <div>
-        <h2 class="category_name"><%= @category.name %><span>のタスク</span></h2>
+        <h2 class="category_name"><%= @category.name %><span>のタスク(<%= @all_task %>件)</span></h2>
       </div>
       <div class="workspace-form">
         <%= form_for(@task, data: { remote: true }, class: 'js-form') do |f| %>
@@ -42,12 +40,20 @@
     </div>
     <div class="workspace-right">
       <div id="workspace-task">
+        
+          <%= link_to('ページ読み込み', 'javascript:void(0);', onclick: "window.location.reload();", class: "reload")  %> 
+          <ul class="explanation">
+            <li class="explanation1">ー完了</li>
+            <li class="explanation2">ー期限内</li>
+            <li class="explanation3">ー期限切</li>
+          </ul>
+        
         <div id="workspace-task-in">
-          <%= render 'tasks/test', tasks: @tasks %>
+          
+          <%= render 'tasks/filter_by_category', tasks: @tasks %>
         </div>
         <%= paginate @tasks %>
       </div>
-      
     </div>
   </div>
 </div>

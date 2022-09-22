@@ -8,7 +8,13 @@ class TasksController < ApplicationController
   def index
     @tasks  = Task.all.page(params[:page]).order(id: :desc).per(12)
     @tasks_done = Task.where.not(start_time:nil)
-    
+    if params[:latest]
+      @tasks = Task.latest.page(params[:page]).order(id: :desc).per(12)
+    elsif params[:old]
+      @tasks = Task.old.page(params[:page]).order(id: :desc).per(12)
+    else
+      @Tasks = Task.all.page(params[:page]).order(id: :desc).per(12)
+    end
   end
 
   def show
@@ -48,8 +54,16 @@ class TasksController < ApplicationController
 
 
   def update
-    @task.update!(task_params)
-    render json: @task
+    if @task.user != current_user
+      redirect_to  root_path
+    else
+      if @task.update(task_params)
+        redirect_to request.referer
+      else
+        flash.now[:danger] = '編集に失敗しました。'
+        render request.referer
+      end
+    end
   end
 
   def assign
@@ -58,7 +72,7 @@ class TasksController < ApplicationController
   def done
     @today = Date.today 
     @task.update(status: "完了", start_time: @today) 
-    redirect_to root_path
+    redirect_to request.referer
   end
   def calendar
     @tasks  = Task.reorder('id DESC')
@@ -79,6 +93,7 @@ class TasksController < ApplicationController
         redirect_to tasks_path(current_user)
     end
   end
+  
   
   
 end

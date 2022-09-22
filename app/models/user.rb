@@ -14,4 +14,6 @@ class User < ApplicationRecord
     clean_up_passwords
     result
   end
+  scope :latest, -> {order(id: :desc)}
+  scope :old, -> {order(id: :asc)}
 end

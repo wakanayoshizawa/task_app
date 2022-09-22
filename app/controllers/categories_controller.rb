@@ -12,7 +12,9 @@ class CategoriesController < ApplicationController
     if params[:category_id]
       @category = Category.find(params[:category_id])
       @tasks = @category.tasks.page(params[:page]).order(id: :desc)
+      @all_task = @category.tasks.count
     end
+    
   end
 
   def list

@@ -82,7 +82,10 @@
 }
 .workspace-right {
   padding-left: 339px;
-  width: 100%;
+  padding-bottom: 100px;
+    width: 100%;
+    overflow-y: scroll;
+    height: 800px;
 }
 .workspace-left .task-form-actions input {
   width: 100%;
@@ -127,29 +130,164 @@
   width: 100%;
   padding: 40px 40px 10px;
 }
-#workspace-task div {
+#workspace-task #workspace-task-in {
   width: 800px;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
   justify-content: space-between;
+  padding-top: 15px;
 }
-
-#workspace-task div ul {
-  display: flex;
+#workspace-task-in img {
+  width: 15px;
+}
+#workspace-task-in ul {
   background: #fff;
   padding: 15px;
   width: 373px;
-    margin: 10px 10px;
+  margin: 10px 10px;
+  display: flex;
+    border: 1px solid #B6B6B6;
+    justify-content: space-between;
+}
+#workspace-task-in .workspace-task-content ul {
+  display: block !important;
 }
 #workspace-task nav {
   width: 800px;
-  padding-top: 30px;
+  padding-top: 50px;
   margin: auto;
+}
+.work-task-edit-title {
+  display: flex;
+  justify-content: space-between;
+}
+.work-task-edit-title span {
+  display: flex;
+}
+.work-task-edit-username {
+  font-size: 0.7rem;
+  color: #6E777C;
 }
 #workspace-task div:after {
   content: "";
     display: block;
     width: 32%;
     height: 0;
+}
+.workspace-link a {
+  width: 28px;
+  height: 26px;
+  text-align: center;
+  display: block;
+}
+.workspace-link a:hover {
+  background: #DEDEDE;
+}
+.workspace-link button {
+  background: #516C9D;
+  border: none;
+  padding: 3px 9px;
+  color: #fff;
+  font-size: 0.6rem;
+  border-radius: 100px;
+}
+.workspace-link button:hover {
+  opacity: 0.7;
+}
+.work-task-edit-form1, .work-task-edit-form2 {
+  padding-bottom: 20px;
+}
+.work-task-edit-form1 input {
+  width: 100%;
+  border: 1px solid #B6B6B6;
+  padding: 5px 7px;
+}
+.work-task-edit-form2 textarea {
+  width: 100%;
+  border: 1px solid #B6B6B6;
+  padding: 5px 7px;
+  height: 95px;
+}
+#workspace-task-in .required ul {
+  border: 2px solid #60CAAD;
+}
+#workspace-task-in .finish ul {
+  border: 2px solid #4EA1D5 !important;
+}
+#workspace-task-in .expired ul {
+  border: 2px solid #E67A7A;
+}
+.reload {
+  color: #fff;
+  background: #516C9D;
+  padding: 10px;
+  text-decoration: none;
+  position: relative;
+  left: 10px;
+  font-size: 0.8rem;
+}
+.reload:hover {
+  color: #fff;
+  opacity: 0.7;
+}
+.required .work-task-edit-title-link {
+  font-weight: 700;
+    color: #60CAAD;
+    margin-bottom: 7px;
+    border-bottom: 2px solid;
+    text-decoration: none;
+}
+.expired .work-task-edit-title-link {
+  font-weight: 700;
+    color: #E67A7A;
+    margin-bottom: 7px;
+    border-bottom: 2px solid;
+    text-decoration: none;
+}
+.finish .work-task-edit-title-link {
+  color: #4EA1D5 !important;  
+}
+.required .work-task-edit-title-link:hover, .expired .work-task-edit-title-link:hover {
+  opacity: 0.7;
+}
+.work-task-edit-action input {
+  border: 1px solid;
+  padding: 2px 8px;
+}
+.work-task-edit-action .back {
+  color: black;
+  border: 1px solid;
+  background: #f2f2f2;
+  padding: 2px 7px;
+  margin-left: 5px;
+}
+.explanation {
+  padding: 17px 0px 0 9px;
+  display: flex;
+  margin: 0;
+}
+.explanation li {
+  font-size: 0.7rem;
+  padding-right: 5px;
+  font-weight: 700;
+}
+.explanation1 {
+  color: #4EA1D5;
+}
+.explanation2 {
+  color: #60CAAD;
+}
+.explanation3 {
+  color: #E67A7A;
+}
+.workspace-task-in-other {
+  border: 2px solid #B6B6B6;
+}
+#workspace-task-in p {
+  background: #FF9800;
+  border-radius: 50%;
+  color: #fff;
+  padding: 2px 7px;
+  margin: 0;
 }

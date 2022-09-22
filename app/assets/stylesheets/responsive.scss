@@ -44,11 +44,19 @@
   #sign_up, #log_in, #password_new, #password_edit {
     width: 100% !important;
   }
-  .task-list, #category-list {
+  .task-list, #category-list, .sort-mytask {
     width: 100% !important;
   }
   .arrow {
-    padding-right: 15px !important;
+    right: 30px !important;
+  }
+  .container .explanation {
+    left: 20px !important;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 780px) {
+  .container .explanation {
+    left: 55px !important;
   }
 }
 @media screen and (min-width: 700px) {
@@ -110,10 +118,17 @@
     width: 1050px !important;
   }
 }
+@media screen and (min-width: 1200px) {
+  .container .explanation {
+    left: 95px !important;
+  }
+}
 @media screen and (min-width: 1300px) {
   .arrow {
     right: 96px !important;
   }
 }
+
+
 
 

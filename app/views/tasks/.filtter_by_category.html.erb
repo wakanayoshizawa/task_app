@@ -1,0 +1,21 @@
+<% @tasks.each do |task| %>
+  <div class="workspace-task-content <%= "finish" if task.status == '完了'  %>  <%= Time.current >= task.start_time ? 'expired' : 'required' %>">
+  <ul class="work-task-edit" id='<%= task.id %>'>
+    <li class="work-task-edit-title">
+      <%= link_to task.title.truncate(26), task, class: 'work-task-edit-title-link' %>
+      <% if task.user == current_user %>
+        <span class="workspace-link">
+          <% unless task.status == '完了'    %>
+            <%= button_to '完了', done_path(task.id), method: :post %>
+          <% end %>
+          <%= link_to "/tasks/#{task.id}/edit", :method => :get, :remote => true do %>
+            <%= image_tag '鉛筆アイコン8.png' %>
+          <% end %>
+        </span>
+      <% end %>
+    </li>
+    <li class="work-task-edit-username">担当者：<%= task.user.name %></li>
+  </ul>
+  </div>
+
+<% end %>

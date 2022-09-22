@@ -1,5 +1,9 @@
 <div class="gg">
   <%= link_to image_tag("/assets/カレンダー__1_-removebg-preview"), calendar_path  %>
+  <div class="sort">
+    <%= link_to '新しい順', tasks_path(latest: "true") %>
+    <%= link_to '古い順', tasks_path(old: "true") %>
+  </div>
 </div>
 
 
@@ -8,7 +12,6 @@
     <div class="task-panel <%= "finish" if task.status == '完了'  %>  <%= Time.current >= task.start_time ? 'expired' : 'required' %>">
       <h4><%= task.title %></h4>
       <div id="task-panel-content">
-
         <% if task.status == '完了' %>
           <p>完了日：<%= task.start_time.strftime('%Y年%m月%d日') %><span>完了</span></p>
         <% else %>

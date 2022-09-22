@@ -1,6 +1,9 @@
 <div class="container">  
   <h2 class="page_title">マイタスク</h2>
-
+  <div class="sort-mytask">
+      <%= link_to '新しい順', user_path(latest: "true") %>
+      <%= link_to '古い順', user_path(old: "true") %>
+    </div>
   <div class="arrow ">
     <p class="arrow-p1">スライド</p>
     <p class="arrow-p2">
@@ -9,7 +12,13 @@
       <span class="dli-caret-right"></span>
     </p>
   </div>
+  <ul class="explanation">
+    <li class="explanation1">ー完了</li>
+    <li class="explanation2">ー期限内</li>
+    <li class="explanation3">ー期限切</li>
+  </ul>
   <div class="task-list">
     <%= render 'users/task-list' %>
   </div>
+  
 </div>
