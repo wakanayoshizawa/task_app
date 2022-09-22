@@ -1,3 +1,4 @@
+
 <% @tasks.each do |task| %>
   <div class="workspace-task-content <%= "finish" if task.status == '完了'  %>  <%= Time.current >= task.start_time ? 'expired' : 'required' %>">
   <ul class="work-task-edit" id='<%= task.id %>'>
@@ -9,7 +10,7 @@
             <%= button_to '完了', done_path(task.id), method: :post %>
           <% end %>
           <%= link_to "/tasks/#{task.id}/edit", :method => :get, :remote => true do %>
-            <%= image_tag '鉛筆アイコン8.png' %>
+            <%= image_tag 'enpitsu.png' %>
           <% end %>
         </span>
       <% end %>
