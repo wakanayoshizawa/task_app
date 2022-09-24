@@ -84,3 +84,7 @@ gem 'simple_calendar', '~> 2.4'
 gem 'kaminari'
 gem 'dotenv-rails'
 gem 'rails_12factor', group: :production
+
+group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
+end
