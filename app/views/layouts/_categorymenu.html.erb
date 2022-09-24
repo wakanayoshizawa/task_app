@@ -4,7 +4,7 @@
     <button class="dropdown_btn" id="dropdown__btn">ワークスペースを選択</button>
     <div class="dropdown_body">
       <ul class="dropdown_list">
-        <% @categories.each do |category| %>
+        <% @categories.first(10).each do |category| %>
           <li class="dropdown_item"><%= link_to category.name, categories_path(category_id: category.id) %></li>
         <% end %>
         <li class="dropdown_item_other">

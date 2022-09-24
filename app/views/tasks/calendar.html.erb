@@ -1,11 +1,9 @@
-<div class="container">  
-  <%= month_calendar events: @tasks do |date, tasks| %>
-    <div id="upper">
-      <p id="upper-other1"><%= date.day %></p>
-      <p id="upper-other2"><%= tasks.count %>件</p>
-    </div>
-    <% tasks.each do |task| %>
-      <div id="under"><%= link_to task.title.truncate(14), task %></div>
-    <% end %>
+<%= month_calendar events: @tasks do |date, tasks| %>
+  <div id="upper">
+    <p id="upper-other1"><%= date.day %></p>
+    <p id="upper-other2"><%= tasks.count %>件</p>
+  </div>
+  <% tasks.each do |task| %>
+    <div id="under"><%= link_to task.title.truncate(14), task %></div>
   <% end %>
-</div>
+<% end %>

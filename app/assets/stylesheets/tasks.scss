@@ -314,9 +314,13 @@
 .gg {
   padding: 0 25px;
   display: flex;
+  margin-top: 25px;
 }
 .gg img {
   width: 70px
+}
+.gg-img:hover {
+  opacity: 0.7;
 }
 .sort a {
   position: relative;
@@ -331,6 +335,7 @@
 
 .simple-calendar {
   overflow-x: scroll;
+  padding: 10px;
 }
 .calendar-heading {
   padding: 20px 0 10px;

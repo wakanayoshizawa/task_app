@@ -1,11 +1,10 @@
 <div class="gg">
-  <%= link_to image_tag("/assets/カレンダー__1_-removebg-preview"), calendar_path  %>
+  <%= link_to image_tag("/assets/calendar"), calendar_path, class: "gg-img"  %>
   <div class="sort">
     <%= link_to '新しい順', tasks_path(latest: "true") %>
     <%= link_to '古い順', tasks_path(old: "true") %>
   </div>
 </div>
-
 
 <div id="task-index">
   <% @tasks.each do |task| %>

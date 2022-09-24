@@ -13,6 +13,13 @@ class CategoriesController < ApplicationController
       @category = Category.find(params[:category_id])
       @tasks = @category.tasks.page(params[:page]).order(id: :desc)
       @all_task = @category.tasks.count
+      if params[:latest]
+        @tasks = @category.tasks.latest.page(params[:page]).order(id: :desc)
+      elsif params[:old]
+        @tasks = @category.tasks.old.page(params[:page]).order(id: :desc)
+      else
+        @tasks = @category.tasks.page(params[:page]).order(id: :desc)
+      end
     end
     
   end

@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   devise_scope :user do
     delete '/users/sign_out' => 'devise/sessions#destroy'
   end  
-  
+  post '/tasks/:id/edit', to: 'tasks#update'
 end

@@ -1,3 +1,2 @@
 
-
-$('#workspace-task-in').prepend("<ul><li><%= @task.title.truncate(32) %></li></ul>");
+$('#workspace-newtask').html('<ul id="<%= @task.id %>"><li class="work-task-edit-title"><%= link_to @task.title.truncate(32), @task, class: "work-task-edit-title-link" %><span class="workspace-link"><% unless @task.status == "完了" %><%= button_to "完了", done_path(@task.id), method: :post %><% end %><%= link_to edit_task_path(@task), :method => :get, :remote => true do %><%= image_tag 'enpitsu.png' %><% end %></span></li><li class="work-task-edit-username">担当者：<%= @task.user.name %></li></ul>');

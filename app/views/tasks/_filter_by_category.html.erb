@@ -6,7 +6,7 @@
       <%= link_to task.title.truncate(26), task, class: 'work-task-edit-title-link' %>
       <% if task.user == current_user %>
         <span class="workspace-link">
-          <% unless task.status == '完了'    %>
+          <% unless task.status == '完了' %>
             <%= button_to '完了', done_path(task.id), method: :post %>
           <% end %>
           <%= link_to "/tasks/#{task.id}/edit", :method => :get, :remote => true do %>

@@ -40,17 +40,19 @@
     </div>
     <div class="workspace-right">
       <div id="workspace-task">
-        
-          <%= link_to('ページ読み込み', 'javascript:void(0);', onclick: "window.location.reload();", class: "reload")  %> 
-          <ul class="explanation">
-            <li class="explanation1">ー完了</li>
-            <li class="explanation2">ー期限内</li>
-            <li class="explanation3">ー期限切</li>
-          </ul>
-        
+        <div class="workspace-sort">
+          <%= link_to '新しい順', categories_path(category_id: @category.id, latest: "true") %>
+          <%= link_to '古い順', categories_path(category_id: @category.id, old: "true") %>
+        </div>
+        <ul class="explanation">
+          <li class="explanation1">ー完了</li>
+          <li class="explanation2">ー期限内</li>
+          <li class="explanation3">ー期限切</li>
+          <li class="explanation4">ー新規タスク</li>
+        </ul>
         <div id="workspace-task-in">
+          <div id="workspace-newtask"></div>
           <%= render 'tasks/filter_by_category', tasks: @tasks %>
-        
         </div>
         <%= paginate @tasks %>
       </div>

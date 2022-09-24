@@ -20,6 +20,7 @@
   <div class="deadline-select">
     <%= f.label :期限 %><br>
     <%= f.datetime_select :start_time, class: 'form-control' %>
+    <%= f.datetime_field :start_time, class: 'form-control' %>
   </div>
   <div class="project-select">
     <%= f.label  "ワークスペース" %><%= link_to "（ワークスペース追加はこちら）", new_category_path, target: :_blank, rel: "noopener noreferrer" %><br>
