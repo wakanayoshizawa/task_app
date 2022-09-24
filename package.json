@@ -5,7 +5,8 @@
     "jquery": "^3.6.1",
     "popper.js": "^1.16.1",
     "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "license": "UNLICENSED"
   },
   "devDependencies": {
     "webpack-dev-server": "^3"
