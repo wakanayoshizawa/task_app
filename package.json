@@ -13,8 +13,5 @@
   "scripts": {
     "start": "webpack-dev-server"
   },
-  "engines": {
-    "node": "18.x"
-  },
   "devDependencies": {}
 }
