@@ -7,9 +7,14 @@
     "jquery": "^3.6.1",
     "popper.js": "^1.16.1",
     "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "3.11.2"
   },
-  "devDependencies": {
-    "webpack-dev-server": "^3"
-  }
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "devDependencies": {}
 }
